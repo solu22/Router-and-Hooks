@@ -23,14 +23,13 @@ const Menu = () => {
 const SingleAnec = ({anec})=>{
 
   const {id} = useParams()
-  const [anecdote] = anec.filter((a)=> a.id === id) 
+  const anecdote = anec.find(a=>a.id === id)
   
   return(
    <div>
-     {anecdote.author}
-     {anecdote.content}
-     {anecdote.info}
-
+     <p>Author:{anecdote.author}</p>
+     <p>Content: {anecdote.content}</p>
+     <p>Info: {anecdote.info}</p>
    </div>
  )
 }

@@ -73,7 +73,7 @@ export const deleteBlog = (id) => {
 }
 
 export const addComment = (blog, comment) => {
-  return async dispatch.comment => {
+  return async dispatch  => {
     const data = await blogService.update({
       ...blog, comments: blog.comments.concat([comment])
     })
